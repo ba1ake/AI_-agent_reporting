@@ -83,6 +83,9 @@ def scraper(
 # Example usage:
 if __name__ == "__main__":
     # Scrape headlines only, no links
+
+    # storagepoint = scraper("websitelink", level(1 = title and source, 2 = title, source and first paragraph, 3 = title, source, all paragraphs and article body divs), include_links (True or False))
+
     headlines = scraper("https://www.nzherald.co.nz/", 1, False)
     for article in headlines:
         print(f"Source: {article['source']}")
